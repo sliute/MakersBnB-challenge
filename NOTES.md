@@ -70,7 +70,7 @@ Owner approved/rejection.
 - Sign out (link)
 
 ##My Account
-- Route: 'My Account'
+- Route: '/Sessions/My_Account'
 - HTML Title: 'MakersBnB | My Account'
 - Header: 'Welcome, username'
 - List of your spaces (status- rented or available )

@@ -23,7 +23,7 @@ I want to be able to sign out from MakersBnB
 
 As a user
 So I can let people rent my available space
-I want to be able to list a property on MakersBnB
+I want to be able to list a space on MakersBnB
 
 As a user
 So I can see what spaces are available
@@ -40,9 +40,14 @@ I want to see them listed in my account
 As a user
 So I can see the spaces Im renting
 I want to see them listed in my account
-
-
-
-
-
 ```
+
+| User Story |                                Acceptance Criteria                                           |
+|------------|----------------------------------------------------------------------------------------------|
+|Sign Up        |Username, e-mail, BCrypt password, confirm p, flash msgs (unique details, incorrect inputs)|
+|Sign In        |E-mail, password, authentication, flash msgs(incorrect inputs), allows renting and listing |
+|Sign Out       |Flash msgs (goodbye)                                                                       |
+|List Space     |Space name, description, price, flash msgs(incomplete/incorrect input)                     |
+|View List Home |Display (in rev chronological order) name, description, price, rent button when appropriate|
+|View List Acc S|Display name and status (in chronological order)                                           |
+|View List Acc R|Display name (in reverse chronological order)                                              |

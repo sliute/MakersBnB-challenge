@@ -18,6 +18,8 @@ When signed in, user can view their own account.
 - List of my spaces, both rented and available clearly defined.
 - List of spaces you have rented.
 
+When MVP is ready, push to heroku!
+
 ##Implementation after MVP
 Calendarise.
 Pictures of spaces.
@@ -47,7 +49,6 @@ Owner approved/rejection.
 - Route: '/Users/New'
 - HTML Title: MakersBnB | Sign Up
 - Within the form:
-  - Full name
   - Username
   - Email
   - Password
@@ -71,6 +72,7 @@ Owner approved/rejection.
 ##My Account
 - Route: 'My Account'
 - HTML Title: 'MakersBnB | My Account'
+- Header: 'Welcome, username'
 - List of your spaces (status- rented or available )
 - List of rented spaces
 - Home (link) - takes you to Properties logged-in

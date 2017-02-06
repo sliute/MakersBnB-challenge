@@ -28,6 +28,20 @@ Capybara.app = MakersBnB
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+
+  config.before(:suite) do # <-- before entire test run
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do # <-- create a "save point" before each test
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do # <-- after each individual test roll back to "save point"
+    DatabaseCleaner.clean
+  end
+
   config.include Capybara::DSL
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest

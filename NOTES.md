@@ -16,3 +16,10 @@ When signed in, user can view their own account.
 ###What will go on the account page:
 - List of my spaces, both rented and available clearly defined.
 - List of spaces you have rented.
+
+##Implementation after MVP
+Calendarise.
+Pictures of spaces.
+See spaces when signed out.
+Search engine ([tags] [period]).
+Owner approved/rejection.

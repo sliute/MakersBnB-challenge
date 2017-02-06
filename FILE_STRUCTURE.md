@@ -20,7 +20,19 @@
 
 ###Models
 - user.rb
+  - requires BCRYPT and includes datamapper::resource
+  * ID
+  * Email - required, unique, format: email address
+  * Username - required, unique
+  * Password Digest
+  - Relationship: has n spaces through resource
 - space.rb
+  * ID
+  * Name
+  * Description
+  * Price
+  * Rented by (default value of nil- later will have a method of available?)
+  - Relationship: Belongs to user
 
 ###Views
 - layout.erb (incl. new session(sign-in))

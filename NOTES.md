@@ -38,6 +38,7 @@ Owner approved/rejection.
 - Route: '/'
 - HTML Title: 'MakersBnB'
 - List of spaces: name, description, price
+- Rent button for each space which directs you to your account
 - My account (link)
 - List a space (link)
 - Sign out (link)

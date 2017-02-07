@@ -1,4 +1,4 @@
-class Chitter < Sinatra::Base
+class MakersBnB < Sinatra::Base
   set :public_folder, Proc.new { File.join(root, 'static') }
   # use Rack::MethodOverride
   enable :sessions

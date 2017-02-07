@@ -1,0 +1,16 @@
+<% if !current_user %>
+<div>
+  <h3>Hi! Please sign in to MakersBnB</h3>
+
+  <form action="/sessions" method="post">
+    <label for="email">Email:</label>
+    <input type="email" name="email">
+    <label for="password">Password:</label>
+    <input type="password" name="password">
+    <input type="submit" value="Sign in">
+  </form>
+</div>
+<br>
+<% end %>
+
+The list of spaces follows here.

@@ -3,7 +3,7 @@ feature 'Sign up' do
     expect { sign_up }.to change(User, :count).by 1
     expect(User.first.email).to eq 'johndoe@internet.com'
     expect(page).to have_content 'Welcome, johndoe!'
-    expect(page.current_path).to eq '/spaces'
+    expect(current_path).to eq '/spaces'
   end
 
   scenario 'Sign up fails if email is entered incorrectly' do

@@ -28,6 +28,22 @@
   The list of spaces follows here.
 </div>
 
+<div>    
+These are the spaces you can rent:
+
+<ul id='all spaces'>
+  <% @spaces.each do |space| %>
+  <li>
+    <%= space.name %>
+    <br>
+    <%= space.description %>
+    <br>
+    <%= space.price %>
+  </li>
+  <br>
+  <% end %>
+</ul>
+</div>
 
 </div>
 
@@ -54,6 +70,7 @@
 
 <br>
 <% end %>
+
 
 <div class ="jumbotron" id="jumbotron2" class="col-md-6">
   The list of spaces follows here.

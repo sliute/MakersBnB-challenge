@@ -14,4 +14,14 @@ class MakersBnB < Sinatra::Base
       erb :'users/new'
     end
   end
+
+  post '/users/my_account' do
+    @spaces = current_user ? current_user.spaces(order: :created_at.desc) : []
+    erb :'users/my_account'
+  end
+
+  get '/users/my_account' do
+    @spaces = current_user ? current_user.spaces(order: :created_at.desc) : []
+    erb :'users/my_account'
+  end
 end

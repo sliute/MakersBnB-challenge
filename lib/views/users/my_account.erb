@@ -1,0 +1,16 @@
+<% if current_user %>
+  <h3>Your listings:</h3>
+
+  <ul id='listed spaces'>
+    <% @spaces.each do |space| %>
+    <li>
+      <%= space.name %>
+      <br>
+      <%= space.description %>
+      <br>
+      <%= space.price %>
+    </li>
+    <br>
+    <% end %>
+  </ul>
+<% end %>

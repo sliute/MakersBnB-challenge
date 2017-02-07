@@ -14,6 +14,7 @@ require_relative 'controllers/sessions'
 class MakersBnB < Sinatra::Base
 
   get '/' do
+    @spaces = Space.all(order: :created_at.desc)
     erb :'spaces/index'
   end
 

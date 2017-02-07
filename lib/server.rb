@@ -1,6 +1,5 @@
 class MakersBnB < Sinatra::Base
-  # set :public_folder, Proc.new { File.join(root, 'static') }
-  # use Rack::MethodOverride
+  use Rack::MethodOverride
   enable :sessions
   set :session_secret, 'white horses'
   register Sinatra::Flash

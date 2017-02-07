@@ -11,4 +11,10 @@ class MakersBnB < Sinatra::Base
     end
   end
 
+  delete '/sessions' do
+    session[:user_id] = nil
+    flash.keep[:sign_out] = 'See you later!'
+    redirect '/spaces'
+  end
+
 end

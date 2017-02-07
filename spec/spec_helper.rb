@@ -7,6 +7,7 @@ require File.join(File.dirname(__FILE__), '..', 'lib/app.rb')
 require 'capybara'
 require 'capybara/rspec'
 require 'database_cleaner'
+require 'dm-timestamps' # TBD
 require 'rspec'
 
 require 'helpers/user_helpers'

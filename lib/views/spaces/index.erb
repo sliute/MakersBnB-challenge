@@ -13,4 +13,17 @@
 <br>
 <% end %>
 
-The list of spaces follows here.
+These are the spaces you can rent:
+
+<ul id='all spaces'>
+  <% @spaces.each do |space| %>
+  <li>
+    <%= space.name %>
+    <br>
+    <%= space.description %>
+    <br>
+    <%= space.price %>
+  </li>
+  <br>
+  <% end %>
+</ul>

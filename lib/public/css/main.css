@@ -1,0 +1,34 @@
+page-header,.page-header,#page-header {
+  color:#ff4d4d;
+}
+
+
+#signup-formtitle {
+  color:#ff4d4d;
+}
+
+.jumbotron {
+  background-color:#f2f2f2;
+  color:black;
+}
+
+#jumbotron2 {
+  background-color: black;
+  color:white;
+  text-align: middle;
+}
+
+#signin-title {
+  color:#ff4d4d;
+}
+
+#welcome-tag {
+  color:#009999;
+  text-align: right;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.signin-form {
+  /*color:#ff4d4d;*/
+}

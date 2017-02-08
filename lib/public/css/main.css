@@ -19,6 +19,11 @@
   color: white;
 }
 
+#signin-button:hover{
+  background-color: #047777;
+  color: white;
+}
+
 .jumbotron {
   background-color:#f2f2f2;
   color:black;

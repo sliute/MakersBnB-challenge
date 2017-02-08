@@ -26,7 +26,7 @@
 
 
 <div class="container">
-  <div id="spaces-title"><h4> These are the spaces you can rent: </h4></div>
+  <div id="spaces-title"><h4> Homes </h4></div>
   <div class="row">
     <div class=class="col-md-12">
       <div id="spaces-title"></div>
@@ -38,7 +38,7 @@
             <div class="card-block">
               <h4 class="card-title"><%= space.name %></h4>
               <p class="card-text"><%= space.description %></p>
-              <p class="card-text"><small class="text-muted"><%= space.price %></small></p>
+              <p class="card-text"><small class="text-muted">£<%= space.price %> per night</small></p>
             </div>
             <% if current_user && !space.rented? %>
                 <!-- change id from "Click to rent" to class "rent-form"  -->

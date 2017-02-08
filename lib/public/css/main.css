@@ -127,18 +127,6 @@ body {
  border-top-right-radius: 0;
 }
 
-/*.card-deck .card .rent-form, #rent-button {
-  width: 300px;
-  background-color: #009999;
-  color: white;
-}
-
-.card-deck .card .card-footer {
-  width: 300px;
-  background-color: #009999;
-  color: white;
-}*/
-
 #rent-button {
   width: 350px;
   height: 49px;

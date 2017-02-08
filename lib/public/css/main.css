@@ -1,10 +1,22 @@
-page-header,.page-header,#page-header {
+.page-header,#header {
   color:#ff4d4d;
 }
 
-
-#signup-formtitle {
+.signup-form,#signup-formtitle {
   color:#ff4d4d;
+  text-align: center;
+}
+
+.jumbotronsignup-form,#signup-button {
+  color:#009999;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#signin-button {
+  background-color: #009999;
+  color: white;
 }
 
 .jumbotron {
@@ -13,12 +25,16 @@ page-header,.page-header,#page-header {
 }
 
 #jumbotron2 {
-  background-color: black;
-  color:white;
+  background-color: #f2f2f2;
+  color: black;
   text-align: middle;
 }
 
 #signin-title {
+  color:#ff4d4d;
+}
+
+#spaces-title {
   color:#ff4d4d;
 }
 
@@ -29,6 +45,43 @@ page-header,.page-header,#page-header {
   font-size: 20px;
 }
 
+
+
+body {
+ padding-top: 40px;
+ padding-bottom: 40px;
+}
+
 .signin-form {
-  /*color:#ff4d4d;*/
+ max-width: 330px;
+ padding: 15px;
+ margin: 0 auto;
+}
+.signin-form .form-signin-heading, {
+ margin-bottom: 10px;
+}
+
+.signin-form .form-control {
+ position: relative;
+ height: auto;
+ -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+ padding: 10px;
+ font-size: 16px;
+}
+.signin-form .form-control:focus {
+ z-index: 2;
+}
+.signin-form input[type="email"] {
+ margin-bottom: -1px;
+ width: 300px;
+ border-bottom-right-radius: 0;
+ border-bottom-left-radius: 0;
+}
+.signin-form input[type="password"] {
+ margin-bottom: 10px;
+ width: 300px;
+ border-top-left-radius: 0;
+ border-top-right-radius: 0;
 }

@@ -1,50 +1,53 @@
 <div class="container">
+
   <div class="row">
-    <class="col-12 col-md-6 offset-md-3">
+    <div class="col-3"></div>
+    <div class="col-6">
       <% if !current_user %>
-      <div class = "jumbotron">
-        <div id="signin-title">
-        <h3>Hi! Please sign in to MakersBnB</h3>
+        <div class= "signin-form">
+          <form class="form-inline" action="/sessions" method="post">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <div class="form-group">
+              <label class="sr-only" for="email"> Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="password"> Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <br>
+              <button type="submit" class="btn btn-lg btn-block" id="signin-button" value="Sign in"> Sign in</button>
+          </form>
         </div>
-        <form class="signin-form" action="/sessions" method="post">
-          <div class="form-group row">
-            <label class="col-4" for="email">Email:</label>
-            <input class="form-control col-8" type="email" name="email">
-          </div>
-          <div class="form-group row">
-            <label class="col-4" for="password">Password:</label>
-            <input class="form-control col-8" type="password" name="password">
-          </div>
-          <div class="form-group d-flex justify-content-center">
-            <input type="submit" value="Sign in" class="btn btn-lg">
-          </div>
-        </form>
-      </div>
-      <br>
       <% end %>
+    </div>
   </div>
 
-<div class ="jumbotron" id="jumbotron2" class="col-md-6">
-  The list of spaces follows here.
+
 </div>
 
-<div>    
-These are the spaces you can rent:
+  <div class="row">
+    <div class=class="col-md-12">
+    <div class ="jumbotron" id="jumbotron2">
+      <div id="spaces-title">
+        <h3> These are the spaces you can rent: </h3>
+      </div>
 
-<ul id='all spaces'>
-  <% @spaces.each do |space| %>
-  <li>
-    <%= space.name %>
-    <br>
-    <%= space.description %>
-    <br>
-    <%= space.price %>
-  </li>
-  <br>
-  <% end %>
-</ul>
-</div>
-
+        <ul id='all spaces'>
+          <% @spaces.each do |space| %>
+          <li>
+            <%= space.name %>
+            <br>
+            <%= space.description %>
+            <br>
+            <%= space.price %>
+          </li>
+          <br>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
 

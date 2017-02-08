@@ -8,19 +8,29 @@
     <link href='http://assets.makersacademy.com/images/favicons/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
     <title> MakersBnB </title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css" media="screen">
 
 
   </head>
 
   <body>
+    <div id="main-wrapper">
+     <%= partial :navbar %>
+     <div class="main-content container-fluid py-2 d-flex align-items-center justify-content-center">
+       <div class="row full-width">
+         <div class="col-12">
+         </div>
+         <div class="col-12">
+         </div>
+       </div>
+     </div>
+
 
     <div class="container">
-
-      <div class="page-header">
+      <div class="pageheader">
         <div id="header">
-          <h1> <a href="http://imgur.com/jUlIXng"><img src="http://i.imgur.com/jUlIXng.jpg" title="source: imgur.com" style="width:100px; height:90px; vertical-align:middle; display:inline;"/> </a> MakersBnB <small> We believe in a world where anyone can belong.</small> </h1>
+          <h1> MakersBnB <small class="text-muted"> We believe in a world where anyone can belong.</small> </h1>
         </div>
       </div>
 
@@ -33,12 +43,8 @@
     <%= partial :flash %>
     <br>
     <%= yield %>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   </body>
 </html>
-
-<!-- <div class="col-md-10" style="vertical-align:middle; ">
-
-
-</div> -->

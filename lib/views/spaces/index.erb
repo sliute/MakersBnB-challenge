@@ -1,5 +1,4 @@
 <div class="container">
-
   <div class="row">
     <div class="col-3"></div>
     <div class="col-6">
@@ -21,30 +20,29 @@
       <% end %>
     </div>
   </div>
-
-
 </div>
 
+
+<div class="container">
+  <div id="spaces-title">
+    <h4> These are the spaces you can rent: </h4>
+  </div>
   <div class="row">
     <div class=class="col-md-12">
-    <div class ="jumbotron" id="jumbotron2">
       <div id="spaces-title">
-        <h3> These are the spaces you can rent: </h3>
       </div>
 
         <ul id='all spaces'>
           <% @spaces.each do |space| %>
-          <li>
-            <%= space.name %>
-            <br>
-            <%= space.description %>
-            <br>
-            <%= space.price %>
-          </li>
-          <br>
+          <div class=class="col-md-4">
+          <dl>
+            <dt><%= space.name %></dt>
+            <dd><%= space.description %></dd>
+            <dd><%= space.price %></dd>
+          </dl>
+          </div>
           <% end %>
         </ul>
-      </div>
     </div>
   </div>
 </div>

@@ -2,20 +2,8 @@
   color:#ff4d4d;
 }
 
-/*.jumbotron {
-  background-color:#f2f2f2;
-  color:black;
-}*/
-
-/*#jumbotron2 {
-  background-color: #f2f2f2;
-  color: black;
-  text-align: middle;
-}*/
-
-
 #spaces-title {
-  color:#ff4d4d;
+  color:#767676;
 }
 
 #welcome-tag {
@@ -25,9 +13,11 @@
   font-size: 20px;
 }
 
-
+.navbar-nav, #username {
+  color: #009999;
+}
 body {
- padding-top: 40px;
+ padding-top: 0px;
  padding-bottom: 40px;
 }
 
@@ -40,6 +30,7 @@ body {
 }
 
 #signin-button:hover{
+  transition: ease 1s;
   background-color: #047777;
   color: white;
 }
@@ -89,6 +80,7 @@ body {
 }
 
 #signup-button:hover{
+  transition: ease 1s;
   background-color: #047777;
   color: white;
 }

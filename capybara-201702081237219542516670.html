@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> MakersBnB </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css" media="screen">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="page-header">
+        <div id="pageheader">
+        <h1> <div class="col-md-10"> <a href="http://imgur.com/jUlIXng"><img src="http://i.imgur.com/jUlIXng.jpg" title="source: imgur.com" style="width:100px;height:90px;" /></a>
+          <div> <br> </div> </div> MakersBnB <small> We believe in a world where anyone can belong.</small></h1>
+      </div>
+    </div>
+
+
+    </div>
+
+
+    
+<div class="container">
+<div class="row">
+  <div class="col-md-8"></div>
+
+<div class="col-md-4" id="welcome-tag">
+  Welcome, johndoe!
+</div>
+
+<article id='sign_out_button'>
+    <form action='/sessions' method='post'>
+      <input type='hidden' name='_method' value='delete'>
+      <input type='submit' value='Sign out'>
+    </form>
+  </article>
+
+</div>
+</div>
+</div>
+
+    <br>
+    
+
+    <br>
+    <h3>List a new space</h3>
+
+<form action="/spaces" method="post">
+  <label for="name">Name:</label>
+  <input type="text" name="name">
+  <br>
+  <label for="description">Description:</label>
+  <input type="text" name="description">
+  <br>
+  <label for="price">Price:</label>
+  <input type="number" name="price" min="0" max="1000">
+  <br>
+  <input type="submit" value="List">
+</form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>

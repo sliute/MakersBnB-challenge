@@ -3,7 +3,7 @@ feature 'Sign in' do
 
   scenario 'A user can sign in with a correct email & password' do
     sign_in(email: user.email, password: user.password)
-    expect(page).to have_content "Welcome, #{user.username}!"
+    expect(page).to have_content "#{user.username}"
   end
 
   scenario 'Sign in fails with incorrect password' do

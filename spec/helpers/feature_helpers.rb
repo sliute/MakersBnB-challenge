@@ -26,6 +26,6 @@ module FeatureHelpers
     fill_in :description, with: 'A lovely one-bedroom condo in southern France, far from foggy London.'
     fill_in :price, with: '5'
     click_button 'List'
-    click_button 'Sign out'
+    click_button 'Sign Out'
   end
 end

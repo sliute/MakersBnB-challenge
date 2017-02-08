@@ -40,7 +40,7 @@ feature 'Listing and seeing spaces' do
     fill_in :description, with: 'A lovely one-bedroom condo in southern France, far from foggy London.'
     fill_in :price, with: '5' # or number
     click_button 'List'
-    click_button 'Sign out'
+    click_button 'Sign Out'
     expect(page).to have_content 'Nice condo!'
     expect(page).to have_content 'A lovely one-bedroom condo in southern France, far from foggy London.'
     expect(page).to have_content '5'

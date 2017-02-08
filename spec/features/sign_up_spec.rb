@@ -2,7 +2,7 @@ feature 'Sign up' do
   scenario 'A user can sign up with email, username, password and password confirmation' do
     expect { sign_up }.to change(User, :count).by 1
     expect(User.first.email).to eq 'johndoe@internet.com'
-    expect(page).to have_content 'Welcome, johndoe!'
+    expect(page).to have_content 'johndoe'
     expect(current_path).to eq '/spaces'
   end
 

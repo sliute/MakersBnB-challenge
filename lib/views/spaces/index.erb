@@ -30,24 +30,30 @@
   <div class="row">
     <div class=class="col-md-12">
       <div id="spaces-title"></div>
-        <ul id='all spaces'>
+      <!-- <div class="col-4"> -->
+      <div class="card-deck">
         <% @spaces.each do |space| %>
-         <div class=class="col-md-4">
-            <dl>
-              <dt><%= space.name %></dt>
-              <dd><%= space.description %></dd>
-              <dd><%= space.price %></dd>
-              <% if current_user && !space.rented? %>
-                <form id="Click to rent" action='/spaces/rent' method="post">
-                  <button type="submit" name="rented_space_id" value="<%= space.id %>">Rent</button>
+          <div class="card">
+            <img class="card-img-top" src="http://i.imgur.com/cujYuIh.jpg" alt="Card image cap" style="width:350px; height:243px; vertical-align:middle; display:inline;">
+            <div class="card-block">
+              <h4 class="card-title"><%= space.name %></h4>
+              <p class="card-text"><%= space.description %></p>
+              <p class="card-text"><small class="text-muted"><%= space.price %></small></p>
+            </div>
+            <% if current_user && !space.rented? %>
+                <!-- change id from "Click to rent" to class "rent-form"  -->
+                <form class="rent-form" action='/spaces/rent' method="post">
+                  <button type="submit" class="btn btn-lg" id="rent-button" name="rented_space_id" value="<%= space.id %>">Rent</button>
                 </form>
-              <% elsif current_user && space.rented? %>
-                This space is rented!
-              <% end %>
-            </dl>
+            <% elsif current_user && space.rented? %>
+              <div class="card-footer">
+                <small class="text-muted">This space is rented!</small>
+              </div>
+            <% end %>
           </div>
-          <% end %>
-        </ul>
+        <% end %>
+      <!-- </div> -->
+    </div>
     </div>
   </div>
 </div>

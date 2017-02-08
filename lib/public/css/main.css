@@ -3,8 +3,14 @@
 }
 
 #spaces-title {
-  color:#767676;
+  color:#484848;
 }
+
+.text-muted {
+  /*Please research what the "!important" means, I placed it as it seemed to work.*/
+  color:#484848!important;
+}
+
 
 #welcome-tag {
   color:#009999;

@@ -1,25 +1,9 @@
-page-header,.page-header,#page-header {
+.page-header,#header {
   color:#ff4d4d;
 }
 
-
-#signup-formtitle {
-  color:#ff4d4d;
-}
-
-.jumbotron {
-  background-color:#f2f2f2;
-  color:black;
-}
-
-#jumbotron2 {
-  background-color: black;
-  color:white;
-  text-align: middle;
-}
-
-#signin-title {
-  color:#ff4d4d;
+#spaces-title {
+  color:#767676;
 }
 
 #welcome-tag {
@@ -29,6 +13,116 @@ page-header,.page-header,#page-header {
   font-size: 20px;
 }
 
+.navbar-nav, #username {
+  color: #009999;
+}
+body {
+ padding-top: 0px;
+ padding-bottom: 40px;
+}
+
+/*Sign in form*/
+
+#signin-button {
+  width: 300px;
+  background-color: #009999;
+  color: white;
+}
+
+#signin-button:hover{
+  transition: ease 1s;
+  background-color: #047777;
+  color: white;
+}
+
 .signin-form {
-  /*color:#ff4d4d;*/
+ max-width: 330px;
+ padding: 15px;
+ margin: 0 auto;
+}
+
+.signin-form .form-control {
+ position: relative;
+ height: auto;
+ -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+ padding: 10px;
+ font-size: 16px;
+}
+.signin-form .form-control:focus {
+ z-index: 2;
+}
+.signin-form input[type="email"] {
+ margin-bottom: -1px;
+ width: 300px;
+ border-bottom-right-radius: 0;
+ border-bottom-left-radius: 0;
+}
+#signin-password {
+ margin-bottom: 10px;
+ width: 300px;
+ border-top-left-radius: 0;
+ border-top-right-radius: 0;
+}
+
+/*Sign up form*/
+
+#signup-formtitle {
+  color:#767676;
+  text-align: center;
+}
+
+#signup-button {
+  width: 300px;
+  background-color: #009999;
+  color: white;
+}
+
+#signup-button:hover{
+  transition: ease 1s;
+  background-color: #047777;
+  color: white;
+}
+
+.signup-form {
+ max-width: 330px;
+ padding: 15px;
+ margin: 0 auto;
+}
+.signup-form .form-signup-heading, {
+ margin-bottom: 10px;
+}
+
+.signup-form .form-control {
+ position: relative;
+ height: auto;
+ -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+ padding: 10px;
+ font-size: 16px;
+}
+.signup-form .form-control:focus {
+ z-index: 2;
+}
+.signup-form input[type="email"] {
+ margin-bottom: -5px;
+ width: 300px;
+}
+.signup-form input[type="text"] {
+ margin-bottom: 10px;
+ width: 300px;
+}
+.signup-form, #password {
+ margin-bottom: -1px;
+ width: 300px;
+ border-bottom-left-radius: 0;
+ border-bottom-right-radius: 0;
+}
+.signup-form, #password_confirmation {
+ margin-bottom: -1px;
+ width: 300px;
+ border-top-left-radius: 0;
+ border-top-right-radius: 0;
 }

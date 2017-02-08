@@ -15,4 +15,9 @@ feature 'Sign in' do
     sign_in(email: 'someotherjoe@otherinternet.com', password: user.password)
     expect(page).to have_content 'Email and/or password are/is incorrect'
   end
+
+  scenario 'Sign in fails with neither email nor password' do
+    sign_in(email: nil, password: nil)
+    expect(page).to have_content 'Email and/or password are/is incorrect'
+  end
 end

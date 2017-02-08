@@ -1,16 +1,44 @@
 <% if current_user %>
+  <a href="/">Home</a> | 
+  <a href="/spaces/new">List a new space!</a>
+  <br>
+  <br>
   <h3>Your listings:</h3>
-
-  <ul id='listed spaces'>
-    <% @spaces.each do |space| %>
-    <li>
-      <%= space.name %>
-      <br>
-      <%= space.description %>
-      <br>
-      <%= space.price %>
-    </li>
-    <br>
+    <% if @listed_spaces != nil%>
+      <ul id='listed spaces'>
+        <% @listed_spaces.each do |space| %>
+        <li>
+          <%= space.name %>
+          <br>
+          <%= space.description %>
+          <br>
+          <%= space.price %>
+        </li>
+        <br>
+        <% end %>
+      </ul>
+    <% else %>
+      None yet!
     <% end %>
-  </ul>
+
+  <h3>Your rentals:</h3>
+    <% if @rented_spaces != nil%>
+      <ul id='listed spaces'>
+        <% @rented_spaces.each do |space| %>
+        <li>
+          <%= space.name %>
+          <br>
+          <%= space.description %>
+          <br>
+          <%= space.price %>
+        </li>
+        <br>
+        <% end %>
+      </ul>
+    <% else %>
+      None yet!
+    <% end %>
+
+
+
 <% end %>

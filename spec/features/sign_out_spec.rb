@@ -4,7 +4,7 @@ feature 'Sign out' do
   scenario 'after having signed in' do
     sign_in(email: 'johndoe@internet.com', password: 'test')
     click_button 'Sign Out'
-    expect(page).to have_content 'See you later!'
+    expect(page).to have_button "Sign in"
     expect(page).not_to have_content "johndoe"
   end
 end

@@ -27,5 +27,4 @@ class User
   end
 
   has n, :spaces, through: Resource
-
 end

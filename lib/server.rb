@@ -11,5 +11,10 @@ class MakersBnB < Sinatra::Base
     def current_user
       @current_user ||= User.get(session[:user_id])
     end
+
+    def prepare_lists
+      @listed_spaces = current_user ? current_user.spaces(order: :created_at.desc) : []
+      @rented_spaces = Space.all(rented_by: current_user.id)
+    end
   end
 end

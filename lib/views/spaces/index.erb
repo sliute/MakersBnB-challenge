@@ -17,6 +17,7 @@
               <button type="submit" class="btn btn-lg" id="signin-button" value="Sign in"> Sign in</button>
           </form>
         </div>
+
       <% end %>
     </div>
   </div>
@@ -24,33 +25,28 @@
 
 
 <div class="container">
-  <div id="spaces-title">
-    <h4> These are the spaces you can rent: </h4>
-  </div>
+  <div id="spaces-title"><h4> These are the spaces you can rent: </h4></div>
   <div class="row">
     <div class=class="col-md-12">
-      <div id="spaces-title">
-      </div>
-
-       <ul id='all spaces'>
-      <% @spaces.each do |space| %>
-      <div class=class="col-md-4">
-      <dl>
-            <dt><%= space.name %></dt>
-            <dd><%= space.description %></dd>
-            <dd><%= space.price %></dd>
-        <% if current_user && !space.rented? %>
-          <form id="Click to rent" action='/spaces/rent' method="post">
-            <button type="submit" name="rented_space_id" value="<%= space.id %>">Rent</button>
-          </form>
-        <% elsif current_user && space.rented? %>
-          This space is rented!
-        <% end %>
-      </dl>
-      </div> 
-      <% end %>
-    </ul>
+      <div id="spaces-title"></div>
+        <ul id='all spaces'>
+        <% @spaces.each do |space| %>
+         <div class=class="col-md-4">
+            <dl>
+              <dt><%= space.name %></dt>
+              <dd><%= space.description %></dd>
+              <dd><%= space.price %></dd>
+              <% if current_user && !space.rented? %>
+                <form id="Click to rent" action='/spaces/rent' method="post">
+                  <button type="submit" name="rented_space_id" value="<%= space.id %>">Rent</button>
+                </form>
+              <% elsif current_user && space.rented? %>
+                This space is rented!
+              <% end %>
+            </dl>
+          </div>
+          <% end %>
+        </ul>
     </div>
-
   </div>
 </div>

@@ -41,7 +41,6 @@
               <p class="card-text"><small class="text-muted">£<%= space.price %> per night</small></p>
             </div>
             <% if current_user && !space.rented? %>
-                <!-- change id from "Click to rent" to class "rent-form"  -->
                 <form class="rent-form" action='/spaces/rent' method="post">
                   <button type="submit" class="btn btn-lg" id="rent-button" name="rented_space_id" value="<%= space.id %>">Rent</button>
                 </form>
@@ -52,7 +51,6 @@
             <% end %>
           </div>
         <% end %>
-      <!-- </div> -->
     </div>
     </div>
   </div>

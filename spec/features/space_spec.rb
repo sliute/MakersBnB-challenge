@@ -14,10 +14,14 @@ feature 'Listing and seeing spaces' do
     fill_in :name, with: 'Nice condo!'
     fill_in :description, with: 'A lovely one-bedroom condo in southern France, far from foggy London.'
     fill_in :price, with: '5'
+    fill_in :start_date, with: '2017-10-10'
+    fill_in :end_date, with: '2017-11-11'
     click_button 'List'
     expect(page).to have_content 'Nice condo!'
     expect(page).to have_content 'A lovely one-bedroom condo in southern France, far from foggy London.'
     expect(page).to have_content '5'
+    expect(page).to have_content '2017-10-10'
+    expect(page).to have_content '2017-11-11'
   end
 
   scenario 'or on the homepage' do

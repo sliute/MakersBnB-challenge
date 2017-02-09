@@ -13,7 +13,8 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/spaces' do
-    space = Space.create(name: params[:name], description: params[:description], price: params[:price], user_id: current_user.id)
+    space = Space.create(name: params[:name], description: params[:description],
+    price: params[:price], start_date: params[:start_date], end_date: params[:end_date], user_id: current_user.id)
     current_user.spaces << space
     current_user.save
     prepare_lists

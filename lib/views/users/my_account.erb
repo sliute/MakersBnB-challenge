@@ -48,15 +48,18 @@
     </ul>
 
   <h3>Your rentals:</h3>
-    <% if @rented_spaces != nil%>
-      <ul id='listed spaces'>
-        <% @rented_spaces.each do |space| %>
+    <% if @accepted_reqs != nil%>
+      <ul id='rented spaces'>
+        <% @accepted_reqs.each do |req| %>
         <li>
-          <%= space.name %>
+          You have booked:
+          <%= Space.get(req.space_id).name %>
           <br>
-          <%= space.description %>
+          <%= Space.get(req.space_id).description %>
           <br>
-          <%= space.price %>
+          <%= Space.get(req.space_id).price %>
+          <br>
+          <%= req.request_date %>
         </li>
         <br>
         <% end %>

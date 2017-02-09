@@ -1,20 +1,55 @@
-<h3>List a new space</h3>
+<br>
+<br>
+<div class = "container">
 
-<form action="/spaces" method="post">
-  <label for="name">Name:</label>
-  <input type="text" name="name">
-  <br>
-  <label for="description">Description:</label>
-  <input type="text" name="description">
-  <br>
-  <label for="price">Price:</label>
-  <input type="number" name="price" min="0" max="1000">
-  <br>
-  <label for="start_date">Start from:</label>
-  <input type="date" name="start_date">
-  <br>
-  <label for="end_date">End on:</label>
-  <input type="date" name="end_date">
-  <br>
-  <input type="submit" value="List">
-</form>
+  <div class="row">
+    <div class="col-3"></div>
+      <div class="col-6">
+
+        <div class="list-space-form">
+          <div id="listform-title">
+            <h3>List a new space</h3>
+          </div>
+
+          <form action="/spaces" method="post">
+
+            <div class="form-group">
+              <label class="sr-only" for="name">Name</label>
+              <input type="text" name="name" class="form-control" id="name" placeholder="Space Name" required>
+            </div>
+
+            <div class="form-group">
+              <label class="sr-only" for="description">Description</label>
+              <textarea name="description" class="form-control" rows="3" id="description" placeholder="Please enter your description here..." required></textarea>
+            </div>
+
+                <div class="form-group">
+                  <!-- <span class="input-group-addon">£</span> -->
+                  <label class="sr-only" for="price">Price</label>
+                  <input type="number" name="price" min="0" max="1000" class="form-control" id="price" placeholder="Price" required>
+                </div>
+
+
+
+            <div class="row">
+                <div class="form-group col-6">
+                  <label for="start_date">Available From:</label>
+                  <input type="date" name="start_date" class="form-control" id="start-date" required>
+                </div>
+
+                <div class="form-group col-6">
+                  <label for="end_date">Available Until:</label>
+                  <input type="date" name="end_date" class="form-control" id="end-date" required>
+                </div>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-lg" id="listspace-button" value="List">List Space</button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+  </div>
+</div>

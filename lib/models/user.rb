@@ -27,4 +27,5 @@ class User
   end
 
   has n, :spaces, through: Resource
+  has n, :requests, through: Resource
 end

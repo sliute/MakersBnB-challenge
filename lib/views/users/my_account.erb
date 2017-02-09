@@ -16,6 +16,10 @@
           <%= space.price %>
           <br>
           From <%= space.start_date %> to <%= space.end_date %>
+          <br>
+          <form class="view-requests" action="/spaces/view_requests" method="post">
+            <button type="submit" class="btn btn-lg" id="view_requests" name="space_id" value="<%= space.id %>">View Requests</button>
+          </form>
         </li>
         <br>
         <% end %>
@@ -23,6 +27,25 @@
     <% else %>
       None yet!
     <% end %>
+
+    <h3>Your pending requests:</h3>
+    <ul id='requests'>
+      <% @pending_reqs.each do |req| %>
+      <li>
+        <%= Space.get(req.space_id).user.username %>
+        <br>
+        <%= Space.get(req.space_id).name %>
+        <!-- should have worked with req.space.name but it doesn't! -->
+        <br>
+        <%= Space.get(req.space_id).description %>
+        <br>
+        <%= Space.get(req.space_id).price %>
+        <br>
+        <%= req.request_date %>
+      </li>
+      <br>
+      <% end %>
+    </ul>
 
   <h3>Your rentals:</h3>
     <% if @rented_spaces != nil%>

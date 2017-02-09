@@ -23,8 +23,22 @@ class MakersBnB < Sinatra::Base
 
   post '/spaces/rent' do
     space = Space.first(id: params[:rented_space_id].to_i)
-    space.update(rented_by: current_user.id)
+    # space.update(rented_by: current_user.id)
+    req = Request.create(request_date: params[:request_date], status: 'Pending', user_id: current_user.id, space_id: space.id)
     prepare_lists
     erb :'/users/my_account'
+  end
+
+  post '/spaces/view_requests' do
+    @space = Space.get(params[:space_id])
+    @reqs = Request.all(space_id: params[:space_id])
+    @viewable_reqs = @reqs.all(status: 'Pending')
+    erb :'/spaces/view_requests'
+  end
+
+  post '/request' do
+    req = Request.get(params[:req_id])
+    req.update(status: params[:status])
+    redirect '/users/my_account'
   end
 end

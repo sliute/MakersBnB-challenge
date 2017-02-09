@@ -40,14 +40,13 @@
               <p class="card-text"><%= space.description %></p>
               <p class="card-text"><small class="text-muted">£<%= space.price %> per night</small></p>
             </div>
-            <% if current_user && !space.rented? %>
+            <% if current_user %>
                 <form class="rent-form" action='/spaces/rent' method="post">
+                  <label for="request_date">Date:</label>
+                  <input type="date" name="request_date">
+                  <br>
                   <button type="submit" class="btn btn-lg" id="rent-button" name="rented_space_id" value="<%= space.id %>">Rent</button>
                 </form>
-            <% elsif current_user && space.rented? %>
-              <div class="card-footer">
-                <small class="text-muted">This space is rented!</small>
-              </div>
             <% end %>
           </div>
         <% end %>

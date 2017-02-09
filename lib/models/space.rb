@@ -15,4 +15,5 @@ class Space
   end
 
   belongs_to :user
+  has n, :requests, through: Resource
 end

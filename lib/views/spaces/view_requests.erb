@@ -1,0 +1,27 @@
+<%= @space.name %>
+<br>
+<%= @space.description %>
+<br>
+<%= @space.price %>
+<br>
+
+<% if @viewable_reqs != nil%>
+  <ul id='viewable requests'>
+    <% @viewable_reqs.each do |req| %>
+    <li>
+      <%= User.get(req.user_id).username %>
+      <br>
+      <%= req.request_date %>
+      <br>
+      <form class="change-status" action="/request" method="post">
+        <input type='hidden' name='req_id' value="<%= req.id %>">
+        <button type="submit" class="btn btn-lg" id="approve" name="status" value="Approved">Approve</button>
+        <button type="submit" class="btn btn-lg" id="reject" name="status" value="Rejected">Reject</button>
+      </form>
+    </li>
+    <br>
+    <% end %>
+  </ul>
+<% else %>
+  None yet!
+<% end %>

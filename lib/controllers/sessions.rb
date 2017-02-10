@@ -7,7 +7,6 @@ class MakersBnB < Sinatra::Base
       redirect '/'
     else
       flash.next[:errors] = ['Email and/or password are/is incorrect']
-      # erb :'spaces/index'
       redirect '/'
     end
   end

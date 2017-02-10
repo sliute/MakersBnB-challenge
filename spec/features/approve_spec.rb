@@ -4,17 +4,8 @@ feature 'Approving requests' do
 
   scenario 'User can view requests for a specific space they listed' do
     sign_in_list_sign_out(email: user.email, password: user.password)
-    sign_in(email: user2.email, password: user2.password)
-    visit '/'
-    # use datepicker to pick a date here... such as 2017-11-10 (Nov 10, one day before end_date)
-    # datepicker should use min and max based on this space's start and end dates.
-    fill_in :request_date, with: '2017-11-10'
-    click_button 'Rent'
-
-    click_button 'Sign Out'
-    sign_in(email: user.email, password: user.password)
-    visit '/users/my_account'
-    click_button 'View Requests'
+    sign_in_request_sign_out(email: user2.email, password: user2.password)
+    sign_in_view_requests(email: user.email, password: user.password)
     expect(current_path).to eq '/spaces/view_requests'
     expect(page).to have_content 'Nice condo!'
     expect(page).to have_content 'A lovely one-bedroom condo in southern France, far from foggy London.'
@@ -27,16 +18,8 @@ feature 'Approving requests' do
 
   scenario 'User can approve a specific request' do
     sign_in_list_sign_out(email: user.email, password: user.password)
-    sign_in(email: user2.email, password: user2.password)
-    visit '/'
-    # use datepicker to pick a date here... such as 2017-11-10 (Nov 10, one day before end_date)
-    # datepicker should use min and max based on this space's start and end dates.
-    fill_in :request_date, with: '2017-11-10'
-    click_button 'Rent'
-    click_button 'Sign Out'
-    sign_in(email: user.email, password: user.password)
-    visit '/users/my_account'
-    click_button 'View Requests'
+    sign_in_request_sign_out(email: user2.email, password: user2.password)
+    sign_in_view_requests(email: user.email, password: user.password)
     click_button 'Approve'
     click_button 'Sign Out'
     sign_in(email: user2.email, password: user2.password)
@@ -46,16 +29,8 @@ feature 'Approving requests' do
 
   scenario 'User can reject a specific request' do
     sign_in_list_sign_out(email: user.email, password: user.password)
-    sign_in(email: user2.email, password: user2.password)
-    visit '/'
-    # use datepicker to pick a date here... such as 2017-11-10 (Nov 10, one day before end_date)
-    # datepicker should use min and max based on this space's start and end dates.
-    fill_in :request_date, with: '2017-11-10'
-    click_button 'Rent'
-    click_button 'Sign Out'
-    sign_in(email: user.email, password: user.password)
-    visit '/users/my_account'
-    click_button 'View Requests'
+    sign_in_request_sign_out(email: user2.email, password: user2.password)
+    sign_in_view_requests(email: user.email, password: user.password)
     click_button 'Reject'
     click_button 'Sign Out'
     sign_in(email: user2.email, password: user2.password)

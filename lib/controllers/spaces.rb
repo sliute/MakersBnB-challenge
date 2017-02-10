@@ -22,9 +22,9 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/spaces/rent' do
-    space = Space.first(id: params[:rented_space_id].to_i)
-    # space.update(rented_by: current_user.id)
-    req = Request.create(request_date: params[:request_date], status: 'Pending', user_id: current_user.id, space_id: space.id)
+    req = Request.create(request_date: params[:request_date],
+                         status: 'Pending', user_id: current_user.id,
+                         space_id: params[:rented_space_id].to_i)
     prepare_lists
     erb :'/users/my_account'
   end

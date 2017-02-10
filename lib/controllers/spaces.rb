@@ -46,9 +46,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/spaces/view_requests' do
-    @space = Space.get(params[:space_id])
-    @reqs = Request.all(space_id: params[:space_id])
-    @viewable_reqs = @reqs.all(status: 'Pending')
+    prepare_req_list
     erb :'/spaces/view_requests'
   end
 

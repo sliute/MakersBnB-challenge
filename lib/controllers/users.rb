@@ -16,18 +16,12 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/users/my_account' do
-    @listed_spaces = current_user ? current_user.spaces(order: :created_at.desc) : []
-    @reqs = Request.all(user_id: current_user.id)
-    @pending_reqs = @reqs.all(status: 'Pending')
-    @accepted_reqs = @reqs.all(status: 'Approved')
+    prepare_lists
     erb :'users/my_account'
   end
 
   get '/users/my_account' do
-    @listed_spaces = current_user ? current_user.spaces(order: :created_at.desc) : []
-    @reqs = Request.all(user_id: current_user.id)
-    @pending_reqs = @reqs.all(status: 'Pending')
-    @accepted_reqs = @reqs.all(status: 'Approved')
+    prepare_lists
     erb :'users/my_account'
   end
 end

@@ -9,14 +9,7 @@ feature 'Listing and seeing spaces' do
   end
 
   scenario 'and see it listed in their account' do
-    sign_in(email: user.email, password: user.password)
-    visit '/spaces/new'
-    fill_in :name, with: 'Nice condo!'
-    fill_in :description, with: 'A lovely one-bedroom condo in southern France, far from foggy London.'
-    fill_in :price, with: '5'
-    fill_in :start_date, with: '2017-10-10'
-    fill_in :end_date, with: '2017-11-11'
-    click_button 'List'
+    sign_in_list(email: user.email, password: user.password)
     expect(page).to have_content 'Nice condo!'
     expect(page).to have_content 'A lovely one-bedroom condo in southern France, far from foggy London.'
     expect(page).to have_content '5'
@@ -25,12 +18,7 @@ feature 'Listing and seeing spaces' do
   end
 
   scenario 'or on the homepage' do
-    sign_in(email: user.email, password: user.password)
-    visit '/spaces/new'
-    fill_in :name, with: 'Nice condo!'
-    fill_in :description, with: 'A lovely one-bedroom condo in southern France, far from foggy London.'
-    fill_in :price, with: '5'
-    click_button 'List'
+    sign_in_list(email: user.email, password: user.password)
     visit '/'
     expect(page).to have_content 'Nice condo!'
     expect(page).to have_content 'A lovely one-bedroom condo in southern France, far from foggy London.'
@@ -38,17 +26,9 @@ feature 'Listing and seeing spaces' do
   end
 
   scenario 'An unsigned user can also see all spaces on the homepage' do
-    sign_in(email: user.email, password: user.password)
-    visit '/spaces/new'
-    fill_in :name, with: 'Nice condo!'
-    fill_in :description, with: 'A lovely one-bedroom condo in southern France, far from foggy London.'
-    fill_in :price, with: '5' # or number
-    click_button 'List'
-    click_button 'Sign Out'
+    sign_in_list_sign_out(email: user.email, password: user.password)
     expect(page).to have_content 'Nice condo!'
     expect(page).to have_content 'A lovely one-bedroom condo in southern France, far from foggy London.'
     expect(page).to have_content '5'
   end
-
-
 end

@@ -22,9 +22,20 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/spaces/rent' do
+    reqs_for_date = Request.all(request_date: params[:request_date])
+    reqs_for_date_space = reqs_for_date.all(space_id: params[:rented_space_id].to_i)
+    if reqs_for_date_space != []
+      # a flash should exist here
+      redirect '/'
+    end
     space = Space.first(id: params[:rented_space_id].to_i)
-    # space.update(rented_by: current_user.id)
-    req = Request.create(request_date: params[:request_date], status: 'Pending', user_id: current_user.id, space_id: space.id)
+    if Date.parse(params[:request_date]) < Date.parse(space.start_date) || Date.parse(params[:request_date]) > Date.parse(space.end_date)
+      # another flash should be here
+      redirect '/'
+    end
+    req = Request.create(request_date: params[:request_date],
+                         status: 'Pending', user_id: current_user.id,
+                         space_id: params[:rented_space_id].to_i)
     prepare_lists
     erb :'/users/my_account'
   end

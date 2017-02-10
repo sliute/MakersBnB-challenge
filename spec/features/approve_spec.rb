@@ -9,7 +9,7 @@ feature 'Approving requests' do
     # use datepicker to pick a date here... such as 2017-11-10 (Nov 10, one day before end_date)
     # datepicker should use min and max based on this space's start and end dates.
     fill_in :request_date, with: '2017-11-10'
-    click_button 'Rent'
+    click_button 'Request Space'
 
     click_button 'Sign Out'
     sign_in(email: user.email, password: user.password)
@@ -32,7 +32,7 @@ feature 'Approving requests' do
     # use datepicker to pick a date here... such as 2017-11-10 (Nov 10, one day before end_date)
     # datepicker should use min and max based on this space's start and end dates.
     fill_in :request_date, with: '2017-11-10'
-    click_button 'Rent'
+    click_button 'Request Space'
     click_button 'Sign Out'
     sign_in(email: user.email, password: user.password)
     visit '/users/my_account'
@@ -51,7 +51,7 @@ feature 'Approving requests' do
     # use datepicker to pick a date here... such as 2017-11-10 (Nov 10, one day before end_date)
     # datepicker should use min and max based on this space's start and end dates.
     fill_in :request_date, with: '2017-11-10'
-    click_button 'Rent'
+    click_button 'Request Space'
     click_button 'Sign Out'
     sign_in(email: user.email, password: user.password)
     visit '/users/my_account'
@@ -64,5 +64,25 @@ feature 'Approving requests' do
     expect(page).not_to have_content 'Nice condo!'
     expect(page).not_to have_content 'A lovely one-bedroom condo in southern France, far from foggy London.'
     expect(page).not_to have_content '5'
+  end
+
+  scenario 'User does not see request button if no request has been made' do
+    sign_in_list_sign_out(email: user.email, password: user.password)
+    sign_in(email: user2.email, password: user2.password)
+    visit '/'
+    visit '/users/my_account'
+    expect(page).not_to have_content 'View Requests'
+  end
+
+  scenario 'User does not see request button if no request has been made' do
+    sign_in_list_sign_out(email: user.email, password: user.password)
+    sign_in(email: user2.email, password: user2.password)
+    visit '/'
+    fill_in :request_date, with: '2017-11-10'
+    click_button 'Request Space'
+    click_button 'Sign Out'
+    sign_in(email: user.email, password: user.password)
+    visit '/users/my_account'
+    expect(page).to have_content 'View Requests'
   end
 end

@@ -14,7 +14,6 @@ class MakersBnB < Sinatra::Base
 
     def prepare_lists
       @listed_spaces = current_user ? current_user.spaces(order: :created_at.desc) : []
-      @rented_spaces = Space.all(rented_by: current_user.id)
       @reqs = Request.all(user_id: current_user.id)
       @pending_reqs = @reqs.all(status: 'Pending')
     end

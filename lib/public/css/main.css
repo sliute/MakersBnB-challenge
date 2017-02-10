@@ -217,3 +217,7 @@ body {
 .list-space-form, #name {
   max-width: 370!important;
 }
+
+.card, #space_card {
+  margin-bottom: 20px;
+}

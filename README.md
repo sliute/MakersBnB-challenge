@@ -14,7 +14,7 @@ So I can list one of my spaces
 I want to be able to sign in to MakersBnB
 
 As a user
-So I can rent a space
+So I can request a space
 I want to be able to sign in to MakersBnB
 
 As a user
@@ -22,7 +22,7 @@ So I can avoid others posting spaces as me
 I want to be able to sign out from MakersBnB
 
 As a user
-So I can let people rent my available space
+So I can let people request my available space
 I want to be able to list a space on MakersBnB
 
 As a user
@@ -30,7 +30,7 @@ So I can see what spaces are available
 I want to see the list of spaces in reverse chronological order
 
 As a user
-So I can rent a place
+So I can request a place
 I want to be able to choose it
 
 As a user
@@ -48,6 +48,6 @@ I want to see them listed in my account
 |Sign In        |E-mail, password, authentication, flash msgs(incorrect inputs), allows renting and listing |
 |Sign Out       |Flash msgs (goodbye)                                                                       |
 |List Space     |Space name, description, price, flash msgs(incomplete/incorrect input)                     |
-|View List Home |Display (in rev chronological order) name, description, price, rent button when appropriate|
+|View List Home |Display (in rev chronological order) name, description, price, request button when appropriate|
 |View List Acc S|Display name and status (in chronological order)                                           |
 |View List Acc R|Display name (in reverse chronological order)                                              |

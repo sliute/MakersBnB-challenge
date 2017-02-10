@@ -35,7 +35,6 @@
   <div id="spaces-title"><h4> Spaces </h4></div>
   <br>
   <div class="row">
-    <div class=class="col-md-12">
       <div id="spaces-title"></div>
       <div class="card-deck">
         <% @spaces.each do |space| %>
@@ -47,17 +46,18 @@
               <p class="card-text"><small class="text-muted">£<%= space.price %> per night</small></p>
             </div>
             <% if current_user %>
-                <form class="rent-form" action='/spaces/rent' method="post">
+
+                <form class="request-form" action='/spaces/rent' method="post">
                   <div class="input-group date" id="date_picker" data-provide="datepicker">
                     <input type="text" name="request_date" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
                   </div>
                   <br>
-                  <button type="submit" class="btn btn-lg" id="rent-button" name="rented_space_id" value="<%= space.id %>">Rent</button>
+                  <button type="submit" class="btn btn-lg" id="rent-button" name="rented_space_id" value="<%= space.id %>">Request Space</button>
                 </form>
             <% end %>
           </div>
         <% end %>
-    </div>
+        <br>
     </div>
   </div>
 </div>

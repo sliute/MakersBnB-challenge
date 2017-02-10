@@ -10,7 +10,7 @@ feature 'Renting spaces' do
     # use datepicker to pick a date here... such as 2017-11-10 (Nov 10, one day before end_date)
     # datepicker should use min and max based on this space's start and end dates.
     fill_in :request_date, with: '2017-11-10'
-    click_button 'Rent'
+    click_button 'Request Space'
     expect(current_path).to eq '/spaces/rent'
     expect(page).to have_content 'johndoe'
     expect(page).to have_content 'Nice condo!'
@@ -23,7 +23,7 @@ feature 'Renting spaces' do
     sign_in(email: user2.email, password: user2.password)
     visit '/'
     fill_in :request_date, with: '2017-11-10'
-    click_button 'Rent'
+    click_button 'Request Space'
     click_button 'Sign Out'
     sign_in(email: user.email, password: user.password)
     visit '/users/my_account'
@@ -33,7 +33,7 @@ feature 'Renting spaces' do
     sign_in(email: user3.email, password: user3.password)
     visit '/'
     fill_in :request_date, with: '2017-11-10'
-    click_button 'Rent'
+    click_button 'Request Space'
     expect(current_path).to eq '/'
     expect(current_path).not_to eq '/users/my_account'
   end

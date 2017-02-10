@@ -156,7 +156,7 @@ body {
 }
 
 #listspace-button {
-  width: 400px;
+  width: 370px;
   background-color: #009999;
   color: white;
 }
@@ -188,9 +188,9 @@ body {
  z-index: 2;
 }
 
-.list-space-form input[type="date"] {
+.list-space-form, #list_date_picker {
  margin-bottom: -5px;
- width: 198px;
+ /*width: 150px;*/
  color:#767676;
  text-align: right;
 }
@@ -201,16 +201,19 @@ body {
   text-align: center;
 }
 
-.signup-form, input[type="text"] {
+/*.list-space-form, input[type="text"] {
+ margin-bottom: -5px;
+ width: 400px;
+}*/
+.list-space-form, input[type="number"] {
  margin-bottom: -5px;
  width: 400px;
 }
-.signup-form, #price {
+.list-space-form, textarea {
+ margin-bottom: -5px;
+ width: 400px;
+}
 
- margin-bottom: -5px;
- width: 198px;
-}
-.signup-form, #description {
- margin-bottom: -5px;
- width: 400px;
+.list-space-form, #name {
+  max-width: 370!important;
 }

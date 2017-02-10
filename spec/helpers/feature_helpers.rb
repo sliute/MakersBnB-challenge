@@ -51,7 +51,7 @@ module FeatureHelpers
     fill_in :password, with: password
     click_button 'Sign in'
     fill_in :request_date, with: '2017-11-10'
-    click_button 'Rent'
+    click_button 'Request Space'
   end
 
   def sign_in_request_sign_out(email:, password:)
@@ -60,7 +60,7 @@ module FeatureHelpers
     fill_in :password, with: password
     click_button 'Sign in'
     fill_in :request_date, with: '2017-11-10'
-    click_button 'Rent'
+    click_button 'Request Space'
     click_button 'Sign Out'
   end
 

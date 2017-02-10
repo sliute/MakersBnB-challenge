@@ -9,6 +9,7 @@ class Space
   property :start_date, String
   property :end_date, String
 
+  
   def rented?
     self.rented_by ? true : false
   end

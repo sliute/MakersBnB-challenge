@@ -21,7 +21,7 @@
             <% @pending_space_reqs = space_reqs.all(status: 'Pending') %>
             <% if @pending_space_reqs != [] %>
               <form class="view-requests" action="/spaces/view_requests" method="post">
-                <button type="submit" class="btn btn-lg" id="view_requests" name="space_id" value="<%= space.id %>">View Requests</button>
+                <button type="submit" class="btn btn-lg" id="rent-button" name="space_id" value="<%= space.id %>">View Requests</button>
               </form>
               <% else %>
                 None yet!
@@ -38,16 +38,18 @@
 
 
     <div class="container">
-      <h3>Your pending requests:</h3>
+      <h3>Your pending requests</h3>
       <div class="row">
         <div class="card-deck">
           <div id='requests'></div>
             <% @pending_reqs.each do |req| %>
-              <div class="card">
-                <img class="card-img-top" src="http://i.imgur.com/cujYuIh.jpg" alt="Card image cap" style="width:350px; height:243px; vertical-align:middle; display:inline;">
+            <div class="col-md-4 col-xs-12">
+              <div class="card mb-3">
+                <img class="img-fluid" src="http://i.imgur.com/cujYuIh.jpg" alt="Card image cap">
+
                   <div class="card-block">
 
-                      You have booked:
+                      You have booked
                       <h4 class="card-title"><%= Space.get(req.space_id).user.username %></h4>
                       <p class="card-text"><%= Space.get(req.space_id).name %></p>
                       <!-- should have worked with req.space.name but it doesn't! -->
@@ -57,6 +59,7 @@
 
                   </div>
               </div>
+            </div>
               <br>
               <% end %>
             </div>
@@ -64,37 +67,35 @@
         </div>
       </div>
 
-    <div class="container">
-      <h3>Your rentals:</h3>
-      <div class="row">
-        <div class="card-deck">
-        <% if @accepted_reqs != nil%>
-          <div id='rented spaces'></div>
+      <div class="container">
+        <h3>Your rentals</h3>
+        <div class="row">
+          <div class="card-deck">
+            <% if @accepted_reqs != nil%>
+            <div id='requests'></div>
             <% @accepted_reqs.each do |req| %>
-              <div class="card">
-                <img class="card-img-top" src="http://i.imgur.com/cujYuIh.jpg" alt="Card image cap" style="width:350px; height:243px; vertical-align:middle; display:inline;">
-                  <div class="card-block">
+              <div class="col-md-4 col-xs-12">
+                <div class="card mb-3">
+                  <img class="img-fluid" src="http://i.imgur.com/cujYuIh.jpg" alt="Card image cap">
 
-                      You have booked:
+                    <div class="card-block">
+
+                      You have booked
                       <h4 class="card-title"><%= Space.get(req.space_id).name %></h4>
                       <p class="card-text"><%= Space.get(req.space_id).description %></p>
                       <p class="card-text"><%= Space.get(req.space_id).price %></p>
                       <p class="card-text"><%= req.request_date %></p>
-                    <% if current_user %>
-                      <form class="space-from" action='/space/:space_id' method="get">
-                        <button type="submit" class="btn btn-lg" id="rent-button" name="see_space_id" value="Rented property">View your rental</button>
-                      </form>
-                      <% else %>
-                      None yet!
-                    <% end %>
-                    <br>
-                  </div>
+
+                    </div>
+                </div>
               </div>
-              <% end %>
-            </div>
-            <br>
-          <% end %>
+                <br>
+                <% end %>
+                <% end %>
+              </div>
+              <br>
+          </div>
         </div>
-      </div>
+
 
 <% end %>

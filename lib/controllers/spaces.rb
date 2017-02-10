@@ -25,6 +25,10 @@ class MakersBnB < Sinatra::Base
     reqs_for_date = Request.all(request_date: params[:request_date])
     approved_reqs = reqs_for_date.all(status: 'Approved')
     reqs_for_date_space = approved_reqs.all(space_id: params[:rented_space_id].to_i)
+    @listed_spaces = current_user ? current_user.spaces(order: :created_at.desc) : []
+    @reqs = Request.all(user_id: current_user.id)
+    @pending_reqs = @reqs.all(status: 'Pending')
+    @accepted_reqs = @reqs.all(status: 'Approved')
     if reqs_for_date_space != []
       # a flash should exist here
       redirect '/'

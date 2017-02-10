@@ -1,4 +1,4 @@
-<% if current_user %>
+][tcepsniiosutats.lin =! @!?.lin <% if current_user %>
 <!-- I commented these out as we have these links in the navbar, confirm deletion or put in again. -->
   <!-- <a href="/">Home</a> |
   <a href="/spaces/new">List a new space!</a> -->
@@ -17,9 +17,13 @@
           <br>
           From <%= space.start_date %> to <%= space.end_date %>
           <br>
+          <% space_reqs = Request.all(space_id: space.id) %>
+          <% @pending_space_reqs = space_reqs.all(status: 'Pending') %>
+          <% if @pending_space_reqs != [] %>
           <form class="view-requests" action="/spaces/view_requests" method="post">
             <button type="submit" class="btn btn-lg" id="view_requests" name="space_id" value="<%= space.id %>">View Requests</button>
           </form>
+          <% end %>
         </li>
         <br>
         <% end %>

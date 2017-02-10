@@ -192,8 +192,12 @@ body {
  margin-bottom: -5px;
  width: 198px;
  color:#767676;
+ text-align: right;
 }
 .list-space-form, #start-date {
+  text-align: center;
+}
+.list-space-form, #end-date {
   text-align: center;
 }
 
@@ -201,9 +205,10 @@ body {
  margin-bottom: -5px;
  width: 400px;
 }
-.signup-form, input[type="number"] {
+.signup-form, #price {
+
  margin-bottom: -5px;
- width: 400px;
+ width: 198px;
 }
 .signup-form, #description {
  margin-bottom: -5px;

@@ -30,7 +30,7 @@ body {
 /*Sign in form*/
 
 #signin-button {
-  width: 300px;
+  /*width: 300px;*/
   background-color: #009999;
   color: white;
 }
@@ -61,13 +61,13 @@ body {
 }
 .signin-form input[type="email"] {
  margin-bottom: -1px;
- width: 300px;
+ width: 254px;
  border-bottom-right-radius: 0;
  border-bottom-left-radius: 0;
 }
 #signin-password {
- margin-bottom: 10px;
- width: 300px;
+ margin-bottom: -1px;
+ width: 254px;
  border-top-left-radius: 0;
  border-top-right-radius: 0;
 }

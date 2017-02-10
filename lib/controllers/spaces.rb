@@ -23,7 +23,8 @@ class MakersBnB < Sinatra::Base
 
   post '/spaces/rent' do
     reqs_for_date = Request.all(request_date: params[:request_date])
-    reqs_for_date_space = reqs_for_date.all(space_id: params[:rented_space_id].to_i)
+    approved_reqs = reqs_for_date.all(status: 'Approved')
+    reqs_for_date_space = approved_reqs.all(space_id: params[:rented_space_id].to_i)
     if reqs_for_date_space != []
       # a flash should exist here
       redirect '/'

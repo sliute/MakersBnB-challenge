@@ -41,7 +41,7 @@
               <p class="card-text"><small class="text-muted">£<%= space.price %> per night</small></p>
             </div>
             <% if current_user %>
-                <form class="rent-form" action='/spaces/rent' method="post">
+                <form class="request-form" action='/spaces/rent' method="post">
                   <label for="request_date">Date:</label>
                   <input type="date" name="request_date">
                   <br>

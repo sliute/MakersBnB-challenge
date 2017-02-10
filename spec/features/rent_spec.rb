@@ -3,7 +3,7 @@ feature 'Renting spaces' do
   let!(:user2) { User.create(email: 'janedoe@internet.com', username: 'janedoe', password: 'test', password_confirmation: 'test') }
   let!(:user3) { User.create(email: 'jimmydoe@internet.com', username: 'jimmydoe', password: 'test', password_confirmation: 'test') }
 
-  scenario 'User can request to rent a space by picking a date and clicking on a button' do
+  scenario 'User can request a space by picking a date and clicking on a button' do
     sign_in_list_sign_out(email: user.email, password: user.password)
     sign_in(email: user2.email, password: user2.password)
     visit '/'

@@ -5,14 +5,14 @@ User can sign up, sign in and sign out.
 User can see list of all available spaces without being signed in.
 When signed in user can see all available spaces.
 When signed in, user can list a space.
-When signed in, user can rent a space.
+When signed in, user can request a space.
 When signed in, user can view their own account.
 
 ###What will go on the list of spaces page:
 - Name
 - Short description
 - Price per night
-- Button saying click to rent
+- Button saying click to request
 
 ###What will go on the account page:
 - List of my spaces, both rented and available clearly defined.
@@ -32,7 +32,7 @@ Owner approved/rejection.
 ##Homepage
 - Route: '/'
 - HTML Title: 'MakersBnB'
-- List of spaces: name, description, price (no rent button)
+- List of spaces: name, description, price (no request button)
 - Sign in: Text Boxes for email, password. Button for sign-in.
 - Link for sign up.
 
@@ -40,7 +40,7 @@ Owner approved/rejection.
 - Route: '/'
 - HTML Title: 'MakersBnB'
 - List of spaces: name, description, price
-- Rent button for each space which directs you to your account
+- request button for each space which directs you to your account
 - My account (link)
 - List a space (link)
 - Sign out (link)

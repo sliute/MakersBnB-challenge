@@ -47,13 +47,12 @@
               <p class="card-text"><small class="text-muted">£<%= space.price %> per night</small></p>
             </div>
             <% if current_user %>
-
                 <form class="request-form" action='/spaces/rent' method="post">
                   <div class="input-group date" id="date_picker" data-provide="datepicker">
                     <input type="text" name="request_date" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
                   </div>
                   <br>
-                  <button type="submit" class="btn btn-lg" id="rent-button" name="rented_space_id" value="<%= space.id %>">Request Space</button>
+                  <button type="submit" class="btn btn-lg btn-block" id="request-button" name="rented_space_id" value="<%= space.id %>">Request Space</button>
                 </form>
             <% end %>
           </div>

@@ -221,3 +221,8 @@ body {
 .card, #space_card {
   margin-bottom: 20px;
 }
+
+#request-button {
+  background-color: #009999;
+  color: white;
+}

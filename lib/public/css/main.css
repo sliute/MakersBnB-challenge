@@ -223,6 +223,8 @@ body {
 }
 
 #request-button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   background-color: #009999;
   color: white;
 }
@@ -238,6 +240,8 @@ body {
 }
 
 #view-reqs-button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   background-color: #009999;
   color: white;
 }

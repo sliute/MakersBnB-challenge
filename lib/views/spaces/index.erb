@@ -40,7 +40,7 @@
         <% @spaces.each do |space| %>
         <div class="col-md-4 col-xs-12">
           <div class="card mb-3">
-            <img class="img-fluid" src="http://i.imgur.com/cujYuIh.jpg" alt="Card image cap">
+            <img class="img-fluid" src=<%= space.img_url %> alt="Card image cap">
             <div class="card-block">
               <h4 class="card-title"><%= space.name %></h4>
               <p class="card-text"><%= space.description %></p>

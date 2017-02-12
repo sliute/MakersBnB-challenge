@@ -8,8 +8,9 @@ class Space
   property :created_at, DateTime
   property :start_date, String
   property :end_date, String
+  property :img_url, Text
 
-  
+
   def rented?
     self.rented_by ? true : false
   end

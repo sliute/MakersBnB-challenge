@@ -15,8 +15,8 @@
                   <p class="card-text">Date requested: <%= req.request_date %> </p>
                   <form class="change-status" action="/request" method="post">
                     <input type='hidden' name='req_id' value="<%= req.id %>">
-                    <button type="submit" class="btn btn-lg" id="approve" name="status" value="Approved">Approve</button>
-                    <button type="submit" class="btn btn-lg" id="reject" name="status" value="Rejected">Reject</button>
+                    <button type="submit" class="btn btn-lg btn-block" id="approve" name="status" value="Approved">Approve</button>
+                    <button type="submit" class="btn btn-lg btn-block" id="reject" name="status" value="Rejected">Reject</button>
                   </form>
                 <br>
                 <% end %>

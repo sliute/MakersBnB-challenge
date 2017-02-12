@@ -21,7 +21,7 @@
             <% @pending_space_reqs = space_reqs.all(status: 'Pending') %>
             <% if @pending_space_reqs != [] %>
               <form class="view-requests" action="/spaces/view_requests" method="post">
-                <button type="submit" class="btn btn-lg" id="rent-button" name="space_id" value="<%= space.id %>">View Requests</button>
+                <button type="submit" class="btn btn-lg btn-block" id="view-reqs-button" name="space_id" value="<%= space.id %>">View Requests</button>
               </form>
               <% else %>
                 None yet!

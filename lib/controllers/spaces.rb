@@ -34,7 +34,7 @@ class MakersBnB < Sinatra::Base
       redirect '/'
     end
     space = Space.first(id: params[:rented_space_id].to_i)
-    if Date.parse(params[:request_date]) < Date.parse(space.start_date) || Date.parse(params[:request_date]) > Date.parse(space.end_date)
+    if (params[:request_date] < space.start_date) || (params[:request_date] > space.end_date)
       # another flash should be here
       redirect '/'
     end

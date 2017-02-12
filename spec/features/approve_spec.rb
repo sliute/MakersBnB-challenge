@@ -24,7 +24,7 @@ feature 'Approving requests' do
     click_button 'Sign Out'
     sign_in(email: user2.email, password: user2.password)
     visit '/users/my_account'
-    expect(page).to have_content 'You have booked:'
+    expect(page).to have_content 'You have booked'
   end
 
   scenario 'User can reject a specific request' do

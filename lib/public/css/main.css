@@ -241,3 +241,17 @@ body {
   background-color: #009999;
   color: white;
 }
+
+/*Datepicker styling*/
+
+.day {
+	border-radius: 10;
+  transition: 0.5s ease;
+}
+
+.day:hover {
+	border-radius: 10;
+	background-color: #009999 !important;
+  color: #ffffff;
+  transition: 0.5s ease;
+}

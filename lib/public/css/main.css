@@ -264,3 +264,12 @@ body {
   color: #fff;
   background-color: #ff4d4d !important;
 }
+
+.card {
+  width: 100%;
+  length: 100%;
+}
+
+.change-status {
+  text-align: center;
+}

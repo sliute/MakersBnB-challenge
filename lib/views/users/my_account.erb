@@ -9,7 +9,7 @@
         <% if @listed_spaces != nil%>
         <% @listed_spaces.each do |space| %>
         <div class="col-md-4 col-xs-12">
-          <div class="card mb-3">
+          <div class="card mb-3" style="height: 32rem;">
             <img class="img-fluid" src=<%= space.img_url %> alt="Card image cap">
             <div class="card-block">
               <h4 class="card-title"><%= space.name %></h4>
@@ -45,8 +45,8 @@
         <div class="card-deck">
           <div id='requests'></div>
             <% @pending_reqs.each do |req| %>
-            <div class="col-md-4 col-xs-12">
-              <div class="card mb-3">
+            <div class="col-md-4">
+              <div class="card mb-3" style="height: 32rem;">
                 <img class="img-fluid" src=<%= Space.get(req.space_id).img_url %> alt="Card image cap">
 
                   <div class="card-block">
@@ -77,7 +77,7 @@
             <div id='requests'></div>
             <% @accepted_reqs.each do |req| %>
               <div class="col-md-4 col-xs-12">
-                <div class="card mb-3">
+                <div class="card mb-3" style="height: 32rem;">
                   <img class="img-fluid" src=<%= Space.get(req.space_id).img_url %> alt="Card image cap">
 
                     <div class="card-block">

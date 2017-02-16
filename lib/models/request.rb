@@ -2,7 +2,7 @@ class Request
   include DataMapper::Resource
 
   property :id, Serial
-  property :request_date, String
+  property :request_date, Date
   property :status, String
   property :created_at, DateTime
 

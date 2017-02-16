@@ -6,8 +6,8 @@ class Space
   property :description, Text
   property :price, Integer
   property :created_at, DateTime
-  property :start_date, String
-  property :end_date, String
+  property :start_date, Date
+  property :end_date, Date
   property :img_url, Text
 
 

@@ -48,7 +48,7 @@
             </div>
             <% if current_user %>
                 <form class="request-form" action='/spaces/rent' method="post">
-                  <div class="input-group date" id="date_picker" data-provide="datepicker">
+                  <div class="input-group date" id="date_picker" data-date-start-date= <% space.start_date.strftime("%d/%m/%Y") %> data-date-end-date= <% space.end_date.strftime("%d/%m/%Y") %> data-provide="datepicker">
                     <input type="text" name="request_date" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
                   </div>
                   <br>
